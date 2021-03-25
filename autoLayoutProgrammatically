@@ -1,0 +1,32 @@
+//
+//  ViewController.swift
+//  PersonalityT
+//
+//  Created by Chris De Leon on 3/23/21.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .yellow
+        
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "badBB"))
+        view.addSubview(imageView)
+        //imageView.frame = CGRect(x: 0, y: 0, width: 420, height: 420)
+
+        //enables autolayout for our imageview
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 420).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 420).isActive = true
+    }
+    
+}
