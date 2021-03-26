@@ -8,25 +8,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    
+
+let bearImageView: UIImageView = {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "badBB"))
+        return imageView
+        
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .yellow
-        
         //here's our entry point into our app
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "badBB"))
-        view.addSubview(imageView)
+        view.addSubview(bearImageView)
 
         //enables autolayout for our imageview
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+  bearImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 420).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 420).isActive = true
+        bearImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        bearImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        bearImageView.widthAnchor.constraint(equalToConstant: 420).isActive = true
+        bearImageView.heightAnchor.constraint(equalToConstant: 420).isActive = true
     }
     
 }
